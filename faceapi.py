@@ -62,6 +62,9 @@ def swap_face(request: SwapFaceRequest, req:Request):
             "--source", source_file,
             "--target", target_file,
             "--output", output_path,
+            "--execution-providers", "cuda",
+            "--frame-processors", "face_swapper", "face_enhancer",
+            "--face-mask-types", "occlusion",
             # 添加其他必要的 CLI 參數
         ]
         subprocess.run(command, check=True)
