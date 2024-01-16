@@ -55,7 +55,7 @@ def swap_face(request: SwapFaceRequest, req:Request):
     print(output_path)
 
     try:
-        python_executable = "venv/Scripts/python"  # 虛擬環境中的 Python 解釋器
+        python_executable = "python"  # venv/Scripts/python 虛擬環境中的 Python 解釋器
         command = [
             python_executable, "run.py",
             "--headless",
